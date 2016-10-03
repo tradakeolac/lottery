@@ -9,6 +9,8 @@ namespace Lottery.Web.Api.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private static IEnumerable<string> Values = new List<string>();
+        
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
