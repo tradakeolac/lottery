@@ -16,7 +16,30 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-    "Lottery.Entity":"1.0.0"
+    "Lottery.Entity": {
+      "target": "project"
+    },
+    "Lottery.Repository": {
+      "target": "project"
+    },
+    "Lottery.Repository.EntityFramework": {
+      "target": "project"
+    },
+    "Lottery.Infrastructure": {
+      "target": "project"
+    },
+    "Lottery.Crawler": {
+      "target": "project"
+    },
+    "Lottery.Prediction": {
+      "target": "project"
+    },
+    "Lottery.Service": {
+      "target": "project"
+    },
+    "Lottery.Web.Infrastructure": {
+      "target": "project"
+    }
   },
 
   "tools": {
