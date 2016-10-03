@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 
 namespace Lottery.Crawler
 {
-    public class Class1
+    public class MinerConfiguration
     {
-        public Class1()
-        {
-        }
+        public string Address { get;set; }
+        public string OreSelector { get;set; }
     }
 }
