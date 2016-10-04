@@ -10,21 +10,19 @@ namespace Lottery.Web.Api.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        IFortuneHunter _miner;
-        public ValuesController(){
-            _miner = new MineralMiner(); 
-        }
-
+        private static IEnumerable<string> Values = new List<string>();
+        
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            var config = new MinerConfiguration
+            var configuration = new MinerConfiguration
             {
-                Address = "http://ketquaxoso.24h.com.vn/ngay-02-10-2007.html",
+                Address = "ketquaxoso.24h.com.vn/ngay-02-10-2016"
             };
 
-            _miner.Mine(config);
+            IFortuneHunter miner = new MineralMiner();
+            miner.Mine(configuration);
 
             return new string[] { "value1", "value2" };
         }

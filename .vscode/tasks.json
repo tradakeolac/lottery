@@ -13,8 +13,5 @@
             "showOutput": "silent",
             "problemMatcher": "$msCompile"
         }
-    ],
-    "options":{
-        "cwd": "${workspaceRoot}/Lottery.Web.Api"
-    }
+    ]
 }
