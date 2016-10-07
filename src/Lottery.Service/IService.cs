@@ -5,10 +5,8 @@ using System.Threading.Tasks;
 
 namespace Lottery.Service
 {
-    public class Class1
+    public interface IService
     {
-        public Class1()
-        {
-        }
+        
     }
 }
