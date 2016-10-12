@@ -15,15 +15,31 @@
     "Microsoft.Extensions.Logging": "1.0.0",
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
-    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-    "Lottery.Entity":"1.0.0",
-    "Lottery.Crawler":"1.0.0",
-    "Lottery.Infrastructure":"1.0.0",
-    "Lottery.Prediction":"1.0.0",
-    "Lottery.Repository":"1.0.0",
-    "Lottery.Repository.EntityFramework":"1.0.0",
-    "Lottery.Service":"1.0.0",
-    "Lottery.Web.Infrastructure":"1.0.0"
+    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",    
+    "Lottery.Infrastructure": {
+      "target": "project"
+    },
+    "Lottery.Entity": {
+      "target": "project"
+    },
+    "Lottery.Repository": {
+      "target": "project"
+    },
+    "Lottery.Repository.EntityFramework": {
+      "target": "project"
+    },
+    "Lottery.Crawler": {
+      "target": "project"
+    },
+    "Lottery.Prediction": {
+      "target": "project"
+    },
+    "Lottery.Service": {
+      "target": "project"
+    },
+    "Lottery.Web.Infrastructure": {
+      "target": "project"
+    }
   },
 
   "tools": {
