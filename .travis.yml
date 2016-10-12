@@ -1,0 +1,16 @@
+language: csharp
+solution: solution-name.sln
+install:
+- dotnet restore 
+
+- dotnet build src\Lottery.Infrastructure
+- dotnet build src\Lottery.Entity
+- dotnet build src\Lottery.Crawler
+- dotnet build src\Lottery.Repository
+- dotnet build src\Lottery.Repository.EntityFramework
+- dotnet build src\Lottery.Prediction
+- dotnet build src\Lottery.Service
+- dotnet build src\Lottery.Web.Infrastructure
+- dotnet build src\Lottery.Web.Api
+
+
