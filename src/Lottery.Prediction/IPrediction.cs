@@ -5,10 +5,8 @@ using System.Threading.Tasks;
 
 namespace Lottery.Prediction
 {
-    public class Class1
+    public interface IPrediction
     {
-        public Class1()
-        {
-        }
+        void Predict();
     }
 }
