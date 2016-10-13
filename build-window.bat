@@ -42,5 +42,3 @@ dotnet build src\Lottery.Web.Api
 ECHO - Build Lottery.Web.Api project done
 
 ECHO - Complete build application
-
-PAUSE

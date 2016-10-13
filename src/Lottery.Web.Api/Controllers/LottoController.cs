@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lottery.Web.Infrastructure
+namespace Lottery.Web.Api.Controllers
 {
-    public class Class1
+    public class LottoController : BaseController
     {
-        public Class1()
-        {
-        }
+        
     }
 }

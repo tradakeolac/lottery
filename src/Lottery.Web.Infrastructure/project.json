@@ -3,7 +3,26 @@
 
   "dependencies": {
     "NETStandard.Library": "1.6.0",
+    "Microsoft.Extensions.DependencyInjection": "1.0.0",
     "Lottery.Infrastructure": {
+      "target": "project"
+    },
+    "Lottery.Entity": {
+      "target": "project"
+    },
+    "Lottery.Repository": {
+      "target": "project"
+    },
+    "Lottery.Repository.EntityFramework": {
+      "target": "project"
+    },
+    "Lottery.Crawler": {
+      "target": "project"
+    },
+    "Lottery.Prediction": {
+      "target": "project"
+    },
+    "Lottery.Service": {
       "target": "project"
     }
   },

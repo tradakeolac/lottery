@@ -8,4 +8,9 @@ namespace Lottery.Web.Api.Controllers
     {
         
     }
+
+    public abstract class AuthenticatedController : BaseController 
+    {
+        
+    }
 }
