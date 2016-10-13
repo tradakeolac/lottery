@@ -8,7 +8,6 @@ matrix:
     - mono: latest
 install:
 - dotnet restore 
-
 - dotnet build src\Lottery.Infrastructure
 - dotnet build src\Lottery.Entity
 - dotnet build src\Lottery.Crawler
