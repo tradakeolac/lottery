@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lottery.Web.Infrastructure
+namespace Lottery.Service
 {
-    public class Class1
+    public interface IService
     {
-        public Class1()
-        {
-        }
+        
     }
 }

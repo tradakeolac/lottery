@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lottery.Service
+namespace Lottery.Infrastructure.Configuration
 {
-    public class Class1
+    public class LotteryConfiguration
     {
-        public Class1()
+        public LotteryConfiguration()
         {
         }
     }
