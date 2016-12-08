@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Lottery.Web.Api.Controllers
+
+namespace Lottery.Web.Api.Controllers.Api
 {
-    public class AdminController : AuthenticatedController
+    [Route("/api")]
+    public abstract class LotteryApiControllerBase : BaseController
     {
         
     }

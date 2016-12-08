@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Lottery.Service.Abstractions;
+using Lottery.Service.Implementations;
 
 namespace Lottery.Web.Api
 {
@@ -29,6 +31,8 @@ namespace Lottery.Web.Api
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddTransient<IPredictionService, PredictionService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
