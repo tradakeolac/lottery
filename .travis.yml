@@ -1,0 +1,21 @@
+language: csharp
+solution: solution-name.sln
+matrix:
+  include:
+    - dotnet: 1.0.0-preview2-003121
+      mono: none
+      env: DOTNETCORE=1
+    - mono: latest
+install:
+- dotnet restore 
+- dotnet build src\Lottery.Infrastructure
+- dotnet build src\Lottery.Entity
+- dotnet build src\Lottery.Crawler
+- dotnet build src\Lottery.Repository
+- dotnet build src\Lottery.Repository.EntityFramework
+- dotnet build src\Lottery.Prediction
+- dotnet build src\Lottery.Service
+- dotnet build src\Lottery.Web.Infrastructure
+- dotnet build src\Lottery.Web.Api
+
+
