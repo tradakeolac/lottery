@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace Lottery.Web.Api.Controllers
 {    
     public class LottoController : BaseController
@@ -14,5 +15,7 @@ namespace Lottery.Web.Api.Controllers
             var a = 1;
             return View();
         }
+        }
     }
+
 }

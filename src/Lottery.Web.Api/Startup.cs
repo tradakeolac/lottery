@@ -37,7 +37,7 @@ namespace Lottery.Web.Api
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseMvc();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
