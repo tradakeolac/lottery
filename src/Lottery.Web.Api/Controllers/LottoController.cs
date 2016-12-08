@@ -12,10 +12,7 @@ namespace Lottery.Web.Api.Controllers
         [Route("/api/lottery/all")]
         public IActionResult GetAll() 
         {
-            var a = 1;
-            return View();
-        }
+            
         }
     }
-
 }
