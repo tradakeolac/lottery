@@ -20,8 +20,6 @@ namespace Lottery.Web.Api.Controllers.Api
         [Route("all")]
         public IActionResult GetAll() 
         {
-
-            return Json(2);
             return Json(this.PredictionService.Predict());
         }
 
