@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Lottery.Web.Api.Controllers
 {
-    public class AdminController : AuthenticatedController
+    
+    public abstract class AuthenticatedController : BaseController 
     {
         
     }

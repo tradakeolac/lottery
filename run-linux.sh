@@ -1,6 +1,6 @@
 echo Run application
 
-call build-window.bat
+sh build-linux.sh
 
 cd "src/Lottery.Web.Api"
 
