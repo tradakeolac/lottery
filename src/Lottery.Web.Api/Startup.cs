@@ -9,11 +9,18 @@ namespace Lottery.Web.Api
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
+    using Microsoft.EntityFrameworkCore.Design;
+    using Microsoft.EntityFrameworkCore;
     using Lottery.Service.Abstractions;
     using Lottery.Service.Implementations;
     using Lottery.Prediction;
     using Lottery.Prediction.Implementations;
+    using Lottery.Repository.EntityFramework;
+    using Lottery.Entity.Entities;
+    using Lottery.Prediction;
+    using Lottery.Prediction.Implementations;
 
+    
     public class Startup
     {
         public Startup(IHostingEnvironment env)
@@ -36,6 +43,7 @@ namespace Lottery.Web.Api
 
             services.AddTransient<IPredictionService, PredictionService>();
             services.AddTransient<IPrediction, SimplePredictionAlgorithm>();
+            services.AddDbContext<LotteryDbContext>(opt => opt.UseInMemoryDatabase());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +52,22 @@ namespace Lottery.Web.Api
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            var context = app.ApplicationServices.GetService<LotteryDbContext>();
+
+            this.Seed(context);
+
             app.UseMvcWithDefaultRoute();
+        }
+
+        private void Seed(LotteryDbContext dbContext) 
+        {
+            dbContext.LotteryResults.Add(new SeventhPrizeEntity() 
+            {
+                Result = 20,
+                CreatedDate = DateTime.Now
+            });
+
+            dbContext.SaveChanges();
         }
     }
 }

@@ -10,5 +10,7 @@ namespace Lottery.Entity
         protected BaseEntity()
         {
         }
+
+        public virtual int Id { get; set; }
     }
 }

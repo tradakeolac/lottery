@@ -8,6 +8,6 @@ namespace Lottery.Repository
 {
     public interface IGenericRepository
     {
-        
+        IEnumerable<T> GetAll<T>() where T : BaseEntity;
     }
 }

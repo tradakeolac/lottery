@@ -12,7 +12,9 @@ namespace Lottery.Entity.Entities
             }
         }
 
-        public int Result { get; set; }   
+        public virtual int Result { get; set; } 
+
+        public virtual DateTime CreatedDate { get; set; }  
     }    
 
     public class FirstPrizeEntity : LotteryResultEntity { }

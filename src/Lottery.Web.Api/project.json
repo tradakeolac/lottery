@@ -1,87 +1,84 @@
 {
-  "dependencies": {
-    "Microsoft.NETCore.App": {
-      "version": "1.0.0",
-      "type": "platform"
+    "dependencies": {
+        "Microsoft.NETCore.App": {
+            "version": "1.0.0",
+            "type": "platform"
+        },
+        "Microsoft.AspNetCore.Mvc": "1.0.1",
+        "Microsoft.AspNetCore.Routing": "1.0.1",
+        "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
+        "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
+        "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
+        "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0",
+        "Microsoft.Extensions.Configuration.Json": "1.0.0",
+        "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+        "Microsoft.Extensions.Logging": "1.1.0",
+        "Microsoft.Extensions.Logging.Console": "1.0.0",
+        "Microsoft.Extensions.Logging.Debug": "1.0.0",
+        "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
+        "Lottery.Infrastructure": {
+            "target": "project"
+        },
+        "Lottery.Entity": {
+            "target": "project"
+        },
+        "Lottery.Repository": {
+            "target": "project"
+        },
+        "Lottery.Repository.EntityFramework": {
+            "target": "project"
+        },
+        "Lottery.Crawler": {
+            "target": "project"
+        },
+        "Lottery.Prediction": {
+            "target": "project"
+        },
+        "Lottery.Service": {
+            "target": "project"
+        },
+        "Lottery.Web.Infrastructure": {
+            "target": "project"
+        },
+        "Microsoft.EntityFrameworkCore.Design": "1.1.0",
+        "Microsoft.EntityFrameworkCore.InMemory": "1.1.0"
     },
-    "Microsoft.AspNetCore.Mvc": "1.0.1",
-    "Microsoft.AspNetCore.Routing": "1.0.1",
-    "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
-    "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
-    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
-    "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0",
-    "Microsoft.Extensions.Configuration.Json": "1.0.0",
-    "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
-    "Microsoft.Extensions.Logging": "1.0.0",
-    "Microsoft.Extensions.Logging.Console": "1.0.0",
-    "Microsoft.Extensions.Logging.Debug": "1.0.0",
-    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",    
-    "Lottery.Infrastructure": {
-      "target": "project"
+    "tools": {
+        "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"
     },
-    "Lottery.Entity": {
-      "target": "project"
+    "frameworks": {
+        "netcoreapp1.0": {
+            "imports": [
+                "dotnet5.6",
+                "portable-net45+win8"
+            ]
+        }
     },
-    "Lottery.Repository": {
-      "target": "project"
+    "buildOptions": {
+        "emitEntryPoint": true,
+        "preserveCompilationContext": true,
+        "debugType": "portable"
     },
-    "Lottery.Repository.EntityFramework": {
-      "target": "project"
+    "runtimeOptions": {
+        "configProperties": {
+            "System.GC.Server": true
+        }
     },
-    "Lottery.Crawler": {
-      "target": "project"
+    "publishOptions": {
+        "include": [
+            "wwwroot",
+            "Views",
+            "Areas/**/Views",
+            "appsettings.json",
+            "web.config"
+        ]
     },
-    "Lottery.Prediction": {
-      "target": "project"
+    "scripts": {
+        "postpublish": [
+            "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
+        ]
     },
-    "Lottery.Service": {
-      "target": "project"
-    },
-    "Lottery.Web.Infrastructure": {
-      "target": "project"
+    "tooling": {
+        "defaultNamespace": "Lottery.Web.Api"
     }
-  },
-
-  "tools": {
-    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"
-  },
-
-  "frameworks": {
-    "netcoreapp1.0": {
-      "imports": [
-        "dotnet5.6",
-        "portable-net45+win8"
-      ]
-    }
-  },
-
-  "buildOptions": {
-    "emitEntryPoint": true,
-    "preserveCompilationContext": true,
-    "debugType": "portable"
-  },
-
-  "runtimeOptions": {
-    "configProperties": {
-      "System.GC.Server": true
-    }
-  },
-
-  "publishOptions": {
-    "include": [
-      "wwwroot",
-      "Views",
-      "Areas/**/Views",
-      "appsettings.json",
-      "web.config"
-    ]
-  },
-
-  "scripts": {
-    "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
-  },
-
-  "tooling": {
-    "defaultNamespace": "Lottery.Web.Api"
-  }
 }
