@@ -1,17 +1,19 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Lottery.Service.Abstractions;
-using Lottery.Service.Implementations;
-
 namespace Lottery.Web.Api
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Logging;
+    using Lottery.Service.Abstractions;
+    using Lottery.Service.Implementations;
+    using Lottery.Prediction;
+    using Lottery.Prediction.Implementations;
+
     public class Startup
     {
         public Startup(IHostingEnvironment env)
@@ -33,6 +35,7 @@ namespace Lottery.Web.Api
             services.AddMvc();
 
             services.AddTransient<IPredictionService, PredictionService>();
+            services.AddTransient<IPrediction, SimplePredictionAlgorithm>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
